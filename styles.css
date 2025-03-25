@@ -1,0 +1,223 @@
+/* 🎨 Paleta de colores modernos */
+:root {
+    --background: #121826;    /* Azul oscuro casi negro */
+    --card-bg: #1E213A;       /* Morado grisáceo para tarjetas */
+    --text-light: #FFFFFF;    /* Blanco para resaltar */
+    --text-primary: #ADFC92;  /* Verde brillante */
+    --accent: #6A0DAD;        /* Morado vibrante */
+    --highlight: #9D4EDD;     /* Morado claro para detalles */
+}
+
+/* 🌅 Fondo general */
+body {
+    background: var(--background);
+    color: var(--text-light);
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* Centra el contenido verticalmente */
+    min-height: 100vh;       /* Asegura que la página ocupe todo el alto de la ventana */
+    flex-direction: column;  /* Permite que los elementos se apilen */
+}
+
+/* 🏠 Encabezado */
+header {
+    background: var(--accent);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo del encabezado */
+    border-radius: 15px; /* Redondea los bordes del encabezado */
+}
+
+#small-img {
+    width: 25%;  /* Ajusta el ancho */
+    height: auto;  /* Ajusta el alto proporcionalmente */
+    padding-left: 75%;
+}
+
+/* 🏷️ Títulos */
+h2 {
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* 🎮 Tarjetas de proyectos en una sola columna */
+.projects {
+    width: 100%;             /* Asegura que ocupe todo el ancho disponible */
+    max-width: 1200px;       /* Limita el ancho máximo de la sección de proyectos */
+    display: flex;
+    flex-direction: column;  /* Dispone las tarjetas en una columna */
+    align-items: center;     /* Centra las tarjetas horizontalmente */
+}
+
+/* 🎮 Tarjetas de proyectos */
+.project {
+    background: var(--card-bg);
+    padding: 40px;             /* Aumenta el relleno para dar más espacio dentro de las tarjetas */
+    border-radius: 15px;
+    width: 90%;                /* Aumenta el ancho de las tarjetas */
+    max-width: 1200px;         /* Aumenta el ancho máximo de las tarjetas para que sean más grandes */
+    min-height: 380px;         /* Aumenta la altura mínima */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid var(--highlight);
+    margin-bottom: 30px; /* Espaciado entre tarjetas */
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+/* 🖼️ Imagen del proyecto */
+.project img {
+    width: 50%;                /* Aumenta el tamaño de la imagen aún más */
+    max-height: 350px;         /* Aumenta la altura máxima de la imagen */
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--accent);
+}
+
+/* 📄 Contenido del proyecto */
+.project-content {
+    width: 45%;                /* Ajusta el ancho para equilibrar el contenido */
+    padding: 0 20px;
+}
+
+.project-content h3 {
+    font-size: 26px;           /* Aumenta el tamaño del título */
+    color: var(--highlight);
+    margin-bottom: 10px;
+}
+
+/* 🏷️ Tecnologías usadas */
+.tech {
+    font-style: italic;
+    color: var(--text-primary);
+    font-size: 20px;           /* Aumenta el tamaño del texto */
+    margin: 10px 0;
+}
+
+/* 🎯 Botón de enlace */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    background: var(--accent);
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    border: 2px solid var(--highlight);
+}
+
+.btn:hover {
+    background: var(--highlight);
+    color: var(--accent);
+    transform: scale(1.05);
+}
+
+.inline-container {
+    display: flex; /* Alinea los elementos en una sola línea */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    justify-content: flex-start; /* Los elementos se alinean al principio del contenedor */
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+/* Personalizar el color del texto del footer */
+footer {
+    color: #FFFFFF;  /* Color del texto, puedes cambiarlo por el que prefieras */
+}
+
+/* Si quieres personalizar los enlaces dentro del footer */
+footer a {
+    color: #ADFC92;  /* Cambiar color de los enlaces */
+    text-decoration: none;  /* Eliminar subrayado si quieres */
+}
+
+footer a:hover {
+    color: #9D4EDD;  /* Cambiar color del enlace al pasar el ratón */
+}
+
+/* 📱 Responsive para móviles */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .project img {
+        width: 100%;
+        max-height: 250px;       /* Ajuste en la altura de la imagen */
+    }
+
+    .project-content {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+/* 🟣 Sección Sobre Mí */
+#about {
+    text-align: center;
+    background: var(--card-bg); /* Fondo oscuro */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 📄 Párrafos */
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 🔷 Contenedor de habilidades */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 📋 Tablas estilizadas */
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background: var(--background);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🏆 Celdas de la tabla */
+td {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-primary);
+    border: 2px solid var(--accent);
+}
+
